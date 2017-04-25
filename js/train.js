@@ -19,6 +19,17 @@ var waterNormals;
 var increment=0.1;
 init();
 animate();
+var random = Math.floor((Math.random() * 30) + 20);
+setInterval(function(){ disappear(); random = Math.floor((Math.random() * 30) + 20);}, random*1000);
+setInterval(function(){document.getElementById('sounds').innerHTML=
+"<audio autoplay loop> <source src='Sounds/whistle.wav' type='audio/mpeg'> Your browser does not support the audio element</audio>";
+	setTimeout(function(){
+    document.getElementById("sounds").innerHTML="";
+		}, 5000);
+
+}, 30000)
+
+
 
 //Main Function
 function init() {
@@ -39,20 +50,28 @@ function init() {
 	
 
 	//Set up Camera
-	camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 0.1, 200000 );
-	camera.position.set( 0, 1000, 500 );
+	camera = new THREE.PerspectiveCamera( 55, window.innerWidth / window.innerHeight, 0.1, 900000 );
+	
 	
 	//Set up Camera Controls
-	controls = new THREE.OrbitControls( camera, renderer.domElement );
-	controls.enablePan = false;
-	controls.minDistance = 1000.0;
-	controls.maxDistance = 5000.0;
-	controls.maxPolarAngle = Math.PI * 0.5;
-	controls.minPolarAngle = Math.PI * 0.4;
-	controls.enableKeys=false;
-	controls.enableZoom = false;
-	controls.target.set( 0, 1000, 500 );
-
+	//controls = new THREE.OrbitControls( camera, renderer.domElement );
+	controls = new THREE.PointerLockControls( camera );
+				scene.add( controls.getObject() );
+				controlsEnabled = true;
+				controls.enabled = true;
+				var element = document.body;
+				document.getElementsByTagName("canvas")[0].addEventListener( 'click', function ( event ) {
+				element.requestPointerLock();
+			});
+	// controls.enablePan = false;
+	// controls.minDistance = 1000.0;
+	// controls.maxDistance = 5000.0;
+	// controls.maxPolarAngle = Math.PI * 0.5;
+	// controls.minPolarAngle = Math.PI * 0.4;
+	// controls.enableKeys=false;
+	// controls.enableZoom = false;
+	// controls.target.set( 0, 1000, 500 );
+camera.position.set( 0, 1000, 500 );
 	//Add Spotlight
 	spotlight = new THREE.SpotLight(0xffffff, 0.8, 2000); // color, intensity, distance
 	spotlight.position.set(500, 400, 100);
@@ -68,7 +87,7 @@ function init() {
 	scene.add( new THREE.AmbientLight( 0x444444 ) );
 
 	//Add Main Directional Light
-	var light = new THREE.DirectionalLight( 0xffffbb, 0.8 );
+	var light = new THREE.DirectionalLight( 0xffffff, 0.8 );
 	light.position.set( 0, 0, -1 );
 	scene.add( light );
 
@@ -208,8 +227,16 @@ function render() {
 	
 	var time = performance.now() * 0.001;
 	
-	water.material.uniforms.time.value -= 40 / 60.0;
-	controls.update();
+	water.material.uniforms.time.value -= 1;
+	// controls.update();
 	water.render();
 	renderer.render( scene, camera );
+}
+//Function to animate SVG 
+function disappear(){
+	document.getElementById("overlay").innerHTML+="<img id='noface' src='images/NoFace.svg'/>";
+	setTimeout(function(){
+    document.getElementById("overlay").innerHTML="";
+		}, 10000);
+
 }
