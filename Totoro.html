@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Totoro</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				padding:0;
+				margin:0;
+				overflow:hidden;
+			}
+			
+			canvas{
+				display: block;
+			}
+			#overlay {
+    		z-index: 1;
+    		position: fixed;
+    		overflow: auto;
+    		display: block;
+    		width:auto;
+    		margin-left: auto;
+    		margin-right: auto;
+    		}
+    	@keyframes miniAnim {
+		  0% {
+		    bottom:-1000px;
+		  }
+		  40% {
+		    bottom:-1000px;
+		  }
+
+		  50%{
+		  	bottom:-200px;
+		  }
+		  70% {
+		    bottom:-200px;
+		  }
+		  80%{
+				bottom:-1000px;
+		  }
+		  100%{
+		  	bottom:-1000px;
+		  }
+		}
+
+    	#mini{
+    		position:fixed;
+    		bottom: -1000px;
+    		animation: miniAnim 20s infinite;
+    	}
+			
+		</style>
+	</head>
+	<body>
+
+		<script src="js/three.min.js"></script>
+		<script src="js/OrbitControls.js"></script>
+		<script src="js/totoro.js"></script>
+		<div id="overlay">
+			<img id="mini" src='images/miniTotoro.svg' width="450px"/>
+		</div>
+		<audio autoplay loop>
+		  <source src="Sounds/Ambience1.wav" type="audio/wav">
+		Your browser does not support the audio element.
+		</audio>
+	</body>
+</html>
