@@ -1,6 +1,6 @@
 # Final Project Outline
-## Update: Project Completed, View Here:
-[Project](http://i6.cims.nyu.edu/~war256/380/380FinalProject/index.html)
+## Update: Project Completed, View Here: [Project](http://i6.cims.nyu.edu/~war256/380/380FinalProject/index.html)
+
 
 For my project, I aim to recreate iconic scenes from 3 Studio Ghibli Films, which are some of my favorites movies of all time.
 They are 2D, hand-drawn movies, and my focus for this assignment will be placing some of the original 2D elements in new 3D contexts using three.js, and perhaps adding some interactivity if possible. I will also try to incorporate some sound design in a meaningful way.
