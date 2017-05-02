@@ -1,0 +1,51 @@
+body {
+				padding:0;
+				margin:0;
+				overflow:hidden;
+			}
+			
+			canvas{
+				display: block;
+			}
+			#overlay {
+    		z-index: 2;
+    		position: fixed;
+    		overflow: auto;
+    		display: block;
+    		width:auto;
+    		margin-left: auto;
+    		margin-right: auto;
+    		left:500px;
+    		bottom:100px;
+    		}
+
+    		@keyframes jijiAnim {
+		  0% {
+		    top:-1000px;
+		  }
+		  40% {
+		    top:-1000px;
+		  }
+
+		  50%{
+		  	top:200px;
+		  }
+		  60% {
+		    top:200px;
+		  }
+		  80%{
+				top:-1000px;
+		  }
+		  100%{
+		  	top:-1000px;
+		  }
+		}
+
+    		#jiji{
+
+    			position:fixed;
+    			top: -1000px;
+    			transform: rotate(180deg) scale(5);
+    			animation: jijiAnim 40s infinite;
+
+    		}

@@ -13,16 +13,16 @@ document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 //Functin to animate miniTotoro
 setInterval(function(){
 		setTimeout(function(){
-   	 	document.getElementById("mini").src="images/miniTotoroClosed.svg";
+   	 	document.getElementById("mini").innerHTML="<use xlink:href='icons.svg#TotoroClosed' width='450px'/>";
 		}, 11500);
 		setTimeout(function(){
-   	 	document.getElementById("mini").src="images/miniTotoro.svg";
+   	 	document.getElementById("mini").innerHTML="<use xlink:href='icons.svg#Totoro' width='450px'/>";
 		}, 11750);
 		setTimeout(function(){
-   	 	document.getElementById("mini").src="images/miniTotoroClosed.svg";
+   	 	document.getElementById("mini").innerHTML="<use xlink:href='icons.svg#TotoroClosed' width='450px'/>";
 		}, 12500);
 		setTimeout(function(){
-   	 	document.getElementById("mini").src="images/miniTotoro.svg";
+   	 	document.getElementById("mini").innerHTML="<use xlink:href='icons.svg#Totoro' width='450px'/>";
 		}, 12750);
 	}, 20000)
 

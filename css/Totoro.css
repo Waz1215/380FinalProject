@@ -1,0 +1,49 @@
+body {
+				padding:0;
+				margin:0;
+				overflow:hidden;
+			}
+			
+			canvas{
+				display: block;
+			}
+			#overlay {
+    		z-index: 1;
+    		position: fixed;
+    		overflow: auto;
+    		display: block;
+    		width:auto;
+    		margin-left: auto;
+    		margin-right: auto;
+    		padding:0;
+    		}
+    	@keyframes miniAnim {
+		  0% {
+		    bottom:-1000px;
+		  }
+		  40% {
+		    bottom:-1000px;
+		  }
+
+		  50%{
+		  	bottom:100px;
+		  }
+		  70% {
+		    bottom:100px;
+		  }
+		  80%{
+				bottom:-1000px;
+		  }
+		  100%{
+		  	bottom:-1000px;
+		  }
+		}
+
+    	#mini{
+    		padding:0;
+    		position:fixed;
+    		transform:scale(4);
+    		bottom: 100px;
+    		left:-200px;
+    		animation: miniAnim 20s infinite;
+    	}

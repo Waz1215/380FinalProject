@@ -5,43 +5,7 @@
 		<link rel="icon" href="images/noface.ico">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				margin: 0px;
-				overflow: hidden;
-			}
-			#overlay {
-    		z-index: 1;
-    		position: fixed;
-    		overflow: auto;
-    		display: block;
-    		width:auto;
-    		margin-left: auto;
-    		margin-right: auto;
-    	}
-    	canvas{
-    		display: block;
-    	}
-    	@keyframes noFaceAnim {
-		  0% {
-		    opacity: 0;
-		  }
-		  30% {
-		    opacity: 1;
-		  }
-
-		  70%{
-		  	opacity: 1;
-		  }
-		  100% {
-		    opacity: 0;
-		  }
-		}
-
-    	#noface{
-    		animation: noFaceAnim 10s 1;
-    	}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/SpiritedAway.css">
 	</head>
 	<body>
 		<div id="sounds"></div>
@@ -50,7 +14,6 @@
 		Your browser does not support the audio element.
 		</audio>
 		<div id="overlay">
-			
 		</div>
 		<div id="container"></div>
 		<script src="js/three.min.js"></script>

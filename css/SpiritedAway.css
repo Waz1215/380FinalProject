@@ -1,0 +1,39 @@
+body {
+				margin: 0px;
+				overflow: hidden;
+			}
+			#overlay {
+    		z-index: 1;
+    		position: fixed;
+    		overflow: auto;
+    		display: block;
+    		width:auto;
+    		margin-left: auto;
+    		margin-right: auto;
+    	}
+    	canvas{
+    		display: block;
+    	}
+    	@keyframes noFaceAnim {
+		  0% {
+		    opacity: 0;
+		  }
+		  30% {
+		    opacity: 1;
+		  }
+
+		  70%{
+		  	opacity: 1;
+		  }
+		  100% {
+		    opacity: 0;
+		  }
+		}
+
+    	#noFace{
+    		position:fixed;
+    		bottom:100px;
+            left:100px;
+    		transform: scale(6);
+    		animation: noFaceAnim 10s 1;
+    	}

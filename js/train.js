@@ -234,7 +234,7 @@ function render() {
 }
 //Function to animate SVG 
 function disappear(){
-	document.getElementById("overlay").innerHTML+="<img id='noface' src='images/NoFace.svg'/>";
+	document.getElementById("overlay").innerHTML+="<svg id='noFace'><use xlink:href='icons.svg#NoFace' /></svg>";
 	setTimeout(function(){
     document.getElementById("overlay").innerHTML="";
 		}, 10000);
