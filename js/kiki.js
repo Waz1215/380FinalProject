@@ -146,3 +146,15 @@ var delta = clock.getDelta();
 	controls.update(delta);
 	renderer.render( scene, camera );
 }
+function windSound(){
+	document.getElementById('sound').innerHTML="<audio autoplay loop> <source src='Sounds/windRush.mp3' type='audio/mpeg'>Your browser does not support the audio element.</audio>";
+}
+function clearSound(){
+	document.getElementById('sound').innerHTML="";
+}
+
+window.onload=function(){
+	document.getElementsByTagName('body')[0].addEventListener('mousedown', windSound);
+	document.getElementsByTagName('body')[0].addEventListener('mouseup', clearSound);
+
+}

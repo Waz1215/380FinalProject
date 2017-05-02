@@ -1,0 +1,47 @@
+body{
+	background-color: black;
+}
+
+#posters{
+	text-align: center;
+	width:auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#posters img{
+	padding: 20px;
+	width:12%;
+	height: 100%;
+}
+
+@keyframes fadeIn {
+		  0% {
+		    opacity: 0;
+		  }
+		  100%{
+		  	opacity: 1;
+		  }
+}
+
+
+#movie{
+	text-align: center;
+	width:auto;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+#movie img{
+	width:40%;
+	height: 100%;
+	animation: fadeIn 1s 1;
+	padding: 10px;
+}
+
+#posters img:hover{
+  border-color: red;
+  box-shadow: 0 0 8px red;
+}
+
